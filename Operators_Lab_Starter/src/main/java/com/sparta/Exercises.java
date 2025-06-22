@@ -11,9 +11,14 @@ public class Exercises {
 
     // implement this method so that it returns true if num is even, otherwise false
     public static boolean evenOdd(int num) {
-        throw new RuntimeException();
+
+        if(num % 2 == 0){ // Checking if num is divisible by 2 with no remainder
+            return true;
+        } else {
+            return false;
+        }
     }
-	
+
 	 // correct this method - it should multiply x by y and return the result plus one
     public static int anotherMethod(int x, int y) {
         x *= x * y;
@@ -32,11 +37,12 @@ public class Exercises {
     // the sum of all numbers between 1 and n inclusive
     // that are divisible by either 2 or 5
     public static int sumEvenFive(int max) {
-        return -1;
+        int sum = 0;
+        for (int i = 1; i <= max; i++) {
+            if (i % 2 == 0 || i % 5 == 0) {
+                sum += i;
+            }
+        }
+        return sum;
     }
-	
-
-	
-
-
 }
